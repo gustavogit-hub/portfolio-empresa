@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  color: #f7f1e6;
+  --surface: #090909;
+  --surface-soft: #111111;
+  --gold: #d4af37;
+  --gold-soft: rgba(212, 175, 55, 0.16);
+  --text: #f7f1e6;
+  --muted: #9b948a;
+  --shadow-gold: 0 25px 90px rgba(212, 175, 55, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #000;
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(212, 175, 55, 0.4);
+  color: #fff;
+}
+
+.btn-glow {
+  @apply inline-flex items-center justify-center rounded-full border border-[#d4af3711] bg-white/5 px-6 py-3 text-sm font-semibold tracking-[0.24em] text-gold transition duration-300 ease-out backdrop-blur-md shadow-glow hover:border-gold/40 hover:bg-white/10 hover:text-white;
+}
+
+.card-glow {
+  @apply rounded-3xl border border-white/5 bg-[#090909]/80 p-6 shadow-premium backdrop-blur-xl;
+}
+
+.glow-title {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.section-heading {
+  @apply mb-10 text-4xl font-semibold uppercase tracking-[0.28em] text-white;
+}
+
+.glass-panel {
+  @apply rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-2xl;
+}
+
+.image-frame {
+  @apply relative overflow-hidden rounded-[2rem] border border-white/10 shadow-premium;
+}
+
+input[type='range'] {
+  accent-color: var(--gold);
+}
