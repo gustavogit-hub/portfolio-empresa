@@ -11,12 +11,12 @@ export function HeroSection() {
   const y2 = useTransform(scrollY, [0, 400], [10, -36]);
 
   return (
-    <section id="home" className="relative overflow-hidden bg-black px-6 pt-28 pb-24 text-white md:pb-32">
+    <section id="home" className="relative overflow-hidden bg-black px-4 pt-24 pb-20 text-white sm:px-6 sm:pt-28 sm:pb-24 md:pb-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(212,175,55,0.12),_transparent_35%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,_rgba(0,0,0,0.75),_rgba(0,0,0,0.95))]" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-[0.95fr,1.05fr]">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.95fr,1.05fr]">
         <motion.div
-          className="space-y-8 max-w-2xl"
+          className="space-y-8 max-w-2xl lg:max-w-xl"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
@@ -28,24 +28,24 @@ export function HeroSection() {
 
           <p className="text-sm uppercase tracking-[0.32em] text-white/50">Premium painting studio</p>
           <div className="space-y-5">
-            <h1 className="max-w-xl text-5xl font-semibold uppercase tracking-[0.2em] text-white lg:text-6xl">
+            <h1 className="max-w-xl text-4xl font-semibold uppercase tracking-[0.2em] text-white sm:text-5xl lg:text-6xl">
               TRANSFORMAMOS AMBIENTES
             </h1>
-            <p className="max-w-xl text-lg leading-8 text-white/70">
+            <p className="max-w-xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
               COM COR, CUIDADO E QUALIDADE — resultados impactantes para cada espaço da sua casa ou negócio.
             </p>
           </div>
-          <div className="flex flex-wrap gap-4">
-            <Button href="https://wa.me/5511978305530" target="_blank">
+          <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <Button className="w-full sm:w-auto" href="https://wa.me/5511978305530" target="_blank">
               Solicitar orçamento no WhatsApp
             </Button>
-            <Button variant="ghost" href="https://clinquant-froyo-67ee08.netlify.app/" target="_blank">
+            <Button className="w-full sm:w-auto" variant="ghost" href="https://clinquant-froyo-67ee08.netlify.app/" target="_blank">
               Orçamento online
             </Button>
           </div>
         </motion.div>
 
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#090909]/90 shadow-premium">
+        <div className="relative mx-auto w-full max-w-[520px] aspect-[3/4] overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#090909]/90 shadow-premium sm:aspect-[4/5]">
           <motion.div
             className="absolute inset-0"
             style={{ y: y1 }}
